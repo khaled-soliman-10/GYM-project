@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    word-spacing: 3px;
+}
+
+:root {
+    --main-color: #f36100;
+    --sec-color: #ffffff;
+    --back-color: rgb(255, 255, 255 , .2);
+    --main-transition: .3s;
+    --section-paddibg: 70px 0;
+}
+
+.fst-title {
+    color: var(--main-color);
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sec-title {
+    font-size: 30px;
+    color: var(--sec-color);
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: black;
+}
+
+header h1 a {
+    color: var(--sec-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header h1 a span {
+    color: var(--main-color);
+}
+
+header h1 a i {
+    color: var(--main-color);
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header ul a {
+    color: var(--sec-color);
+    transition: var(--main-transition);
+}
+
+header .links li:nth-of-type(5) a {
+    color: var(--main-color);
+}
+
+header ul a:hover {
+    color: var(--main-color);
+}
+
+@media (max-width:1010px) {
+    header h1 a {
+        font-size: 30px;
+    }
+
+    header ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width:868px) {
+    header h1 a {
+        font-size: 25px;
+    }
+
+    header ul li {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width:754px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1 a {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    header ul li {
+        margin: 0 5px;
+    }
+
+    header ul li a {
+        font-size: 15px;
+    }
+
+    header ul:nth-of-type(2) {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    header h1 a {
+        font-size: 25px;
+    }
+
+    header ul li a {
+        font-size: 11px;
+    }
+
+    header ul li {
+        margin: 0 2px;
+    }
+}
+/* end header */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+.team-img {
+    text-align: center;
+    min-height: 60vh;
+    background-image: url("../imgs/gallery-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-img h1 {
+    color: var(--sec-color);
+    font-size: 45px;
+}
+
+.team-img h1 span {
+    color: var(--main-color);
+}
+
+/* end photo  */
+
+.team {
+    padding: var(--section-paddibg);
+    background-color: black;
+}
+
+.our-team {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.our-team .coach {
+    position: relative;
+    min-width: 300px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.our-team .coach img {
+    width: 100%;
+}
+
+.our-team .coach-details {
+    position: absolute;
+    bottom: -123px;
+    background-color: black;
+    color: var(--sec-color);
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    border-top: 2px var(--main-color) solid;
+    transition: var(--main-transition);
+}
+
+.our-team .coach-details h4 {
+    color: #c4c4c4;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.our-team .coach-details ul li {
+    display: inline-block;
+    margin: 10px 7px 0;
+}
+
+.our-team .coach-details ul a {
+    color: #c4c4c4;
+}
+
+.our-team .coach:hover .coach-details {
+    bottom: 0;
+}
+
+/* end team */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    /* min-height: 50vh; */
+    padding: 10px 0 20px 0;
+    background-color: #1e1e1e;
+}
+
+footer .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10px;
+    margin-bottom: 70px;
+}
+
+.contact .location {
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10px;
+    color: var(--sec-color);
+}
+
+.contact .location .loc-icon {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.contact .location .loc-icon i {
+    background-color: var(--main-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+footer .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 20px;
+}
+
+.details .logo a {
+    color: var(--sec-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+footer .details .logo {
+    margin-bottom: 20px;
+}
+
+.details .logo a span {
+    color: var(--main-color);
+}
+
+.details .logo a i {
+    color: var(--main-color);
+}
+
+footer .links p {
+    color: #c4c4c4;
+}
+
+footer .links .my-accounts li {
+    display: inline-block;
+    margin: 20px 10px 0 0;
+}
+
+footer .links .my-accounts li a {
+    color: #c4c4c4;
+    font-size: 19px;
+}
+
+footer .links .sup {
+    text-align: center;
+    color: var(--sec-color);
+    font-size: 35px;
+}
+
+footer .links .support-links li {
+    text-align: center;
+    line-height: 30px;
+}
+
+footer .links .support-links li a {
+    color: #c4c4c4;
+}
+
+footer .links p a {
+    color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+footer .links p a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    align-self: center;
+}
